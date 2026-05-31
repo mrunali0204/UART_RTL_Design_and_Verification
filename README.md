@@ -64,9 +64,11 @@ For actual hardware mapping onto a physical platform operating on a 50 MHz syste
 To prevent bit-truncation or overflow bugs during synthesis, the internal tracking register inside baud_gen.v is declared as a 13-bit wide variable (reg [12:0] counter), as $2^{13} = 8192$, safely encompassing the hardware limit value of 5208. 
 
 7. RTL Design & Finite State Machine Specifications 
+
 7.1 Baud Rate Generator
 The baud rate generator produces timing pulses required for UART transmission and reception.
 The generator divides the system clock frequency according to the required baud rate.
+
 7.2 UART Transmitter FSM States 
 The transmitter operations are governed by a 4-state sequential state machine: 
 IDLE (2'b00): The serial output line tx is held at a steady logic high state (1). The block monitors the control line tx_start. Upon assertion, the parallel input data bus tx_data is latched into an internal storage register data_reg.
@@ -79,6 +81,7 @@ To optimize layout pathing, the receiver is implemented via a high-efficiency 3-
 IDLE (2'b00): The receiver continuously polls the incoming line. Once rx == 0 and a valid baud_tick strobe occurs concurrently, the block confirms a true Start Bit condition and moves to the DATA state.
 DATA (2'b01): The receiver samples the physical rx trace at each following baud_tick transition pulse, reassembling the incoming serial profile directly into an internal register matrix (data_reg[bit_index]).
 STOP (2'b10): Upon capturing all 8 bits, the block confirms the presence of the high Stop Bit framework, copies the completed byte onto the system parallel port rx_data, and drives the output strobe rx_done high for a single cycle to notify the system.
+
 7.4 FIFO Buffer
 FIFO (First In First Out) buffer is used for temporary storage of transmitted and received data.
 The FIFO improves communication reliability by handling multiple data bytes efficiently.
