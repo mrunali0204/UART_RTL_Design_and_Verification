@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ycce 3rd yr/Zoho/UART_Project
+vbaud_gen
+Z1 !s110 1780195571
+!i10b 1
+!s100 6=M`N]@4?aKl3GMID_3]:1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Izj:eEPio;a01Hm?D>cgFW1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1780195383
+8D:/ycce 3rd yr/Zoho/UART_Project/rtl/baud_gen.v
+FD:/ycce 3rd yr/Zoho/UART_Project/rtl/baud_gen.v
+!i122 25
+L0 1 33
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1780195571.000000
+!s107 D:/ycce 3rd yr/Zoho/UART_Project/rtl/baud_gen.v|
+!s90 -reportprogress|300|-work|work|D:/ycce 3rd yr/Zoho/UART_Project/rtl/baud_gen.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vuart_rx
+R1
+!i10b 1
+!s100 CkK9>J>8G;D[`2<Sl=VGL2
+R2
+IA0?<VNlJ_`1FfDEhZJ;jh3
+R3
+R0
+w1780194340
+8D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_rx.v
+FD:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_rx.v
+!i122 26
+L0 1 70
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_rx.v|
+!s90 -reportprogress|300|-work|work|D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_rx.v|
+!i113 1
+R6
+R7
+vuart_top
+Z8 !s110 1780195572
+!i10b 1
+!s100 ^gMI4jC]I`cOU:=fHSHaF0
+R2
+IM:UVB0DXbH3@FoBe=^3c@2
+R3
+R0
+w1780194350
+8D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top.v
+FD:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top.v
+!i122 27
+L0 1 42
+R4
+r1
+!s85 0
+31
+Z9 !s108 1780195572.000000
+!s107 D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top.v|
+!s90 -reportprogress|300|-work|work|D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top.v|
+!i113 1
+R6
+R7
+vuart_top_tb
+R8
+!i10b 1
+!s100 Nf^SVXK:F4J:9:>]n:kYY2
+R2
+IQ@G@H<UY3I7<1UIGc?Yd>1
+R3
+R0
+w1780194417
+8D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top_tb.v
+FD:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top_tb.v
+!i122 28
+L0 3 46
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top_tb.v|
+!s90 -reportprogress|300|-work|work|D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_top_tb.v|
+!i113 1
+R6
+R7
+vuart_tx
+R8
+!i10b 1
+!s100 2BAUGGL40a_KEMB>5@]5g3
+R2
+Ijg62UP@Sz^:>eREZM9Ze<3
+R3
+R0
+w1780194329
+8D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_tx.v
+FD:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_tx.v
+!i122 29
+L0 1 84
+R4
+r1
+!s85 0
+31
+R9
+!s107 D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_tx.v|
+!s90 -reportprogress|300|-work|work|D:/ycce 3rd yr/Zoho/UART_Project/rtl/uart_tx.v|
+!i113 1
+R6
+R7
