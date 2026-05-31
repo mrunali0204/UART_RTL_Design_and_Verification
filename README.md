@@ -146,6 +146,9 @@ Writing self-checking hardware testbenches and analyzing digital timing waveform
 
 13. References
 Texas Instruments UART User Guide Reference Manual: https://www.ti.com/lit/ug/sprugp1/sprugp1.pdf
+
 UART Serial Communication Protocol Standards: https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter
+
 IEEE Standard Verilog Hardware Description Language Documentation (IEEE Std 1364)
+
 ModelSim Tool Suite Simulation and Functional Waveform Verification Manuals
