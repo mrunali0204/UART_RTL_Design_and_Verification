@@ -1,262 +1,164 @@
 # UART RTL Design and Verification
 
-A complete RTL implementation of a **Universal Asynchronous Receiver Transmitter (UART)** using **Verilog HDL**, including UART Transmitter, Receiver, Baud Rate Generator, Testbench, and ModelSim simulation.
+A complete UART (Universal Asynchronous Receiver Transmitter) RTL Design and Verification project implemented in Verilog HDL. This project includes UART Transmitter, Receiver, Baud Rate Generator, Top Module Integration, and functional verification using ModelSim.
 
 ---
 
-## Project Overview
+## 📂 Project Structure
 
-This project implements a complete UART communication interface using Verilog HDL. The design follows a modular RTL approach and verifies data transmission and reception through functional simulation in ModelSim.
-
----
-
-## Features
-
-- UART Transmitter
-- UART Receiver
-- Baud Rate Generator
-- Loopback Communication
-- RTL Design
-- FSM Based Architecture
-- ModelSim Functional Verification
-
----
-
-# Project Structure
-
-```
-UART_PROJECT
+```text
+UART_PROJECT/
+│── docs/
+│   └── report/
 │
-├── docs/
-│
-├── report/
-│
-├── rtl/
+│── rtl/
 │   ├── baud_gen.v
 │   ├── uart_tx.v
 │   ├── uart_rx.v
 │   ├── uart_top.v
 │   └── uart_top_tb.v
 │
-├── screenshots/
-│   ├── Screenshot 2026-05-31 083640.png
-│   ├── Screenshot 2026-05-31 083914.png
-│   ├── Screenshot 2026-05-31 084056.png
-│   ├── Screenshot 2026-05-31 084159.png
-│   ├── Screenshot 2026-05-31 084359.png
-│   ├── Screenshot 2026-05-31 084515.png
-│   └── Screenshot 2026-05-31 084956.png
+│── tb/
 │
-├── tb/
+│── screenshots/
+│   ├── block_diagram.png
+│   ├── Screenshot1.png
+│   ├── Screenshot2.png
+│   ├── Screenshot3.png
+│   ├── Screenshot4.png
+│   ├── Screenshot5.png
+│   └── Screenshot6.png
 │
-├── work/
-│
-├── README.md
+│── work/
+│── README.md
 └── vsim.wlf
 ```
 
 ---
 
+# Features
+
+- UART Transmitter
+- UART Receiver
+- Baud Rate Generator
+- Top-Level Integration
+- RTL Design using Verilog HDL
+- Functional Verification
+- ModelSim Simulation
+
+---
+
 # Block Diagram
 
-> Add your block diagram here.
-
-```md
-![Block Diagram](block_diagram.png)
-```
+![UART Block Diagram](screenshots/block_diagram.png)
 
 ---
 
-# RTL Design
+# RTL Modules
 
-The UART consists of the following RTL modules:
+### 1. baud_gen.v
+Generates the baud clock required for UART communication.
 
-| Module | Description |
-|----------|-------------|
-| baud_gen.v | Generates baud tick |
-| uart_tx.v | UART Transmitter |
-| uart_rx.v | UART Receiver |
-| uart_top.v | Top module integrating TX and RX |
-| uart_top_tb.v | Testbench for simulation |
+### 2. uart_tx.v
+Implements UART data transmission including:
+- Start Bit
+- Data Bits
+- Stop Bit
 
----
+### 3. uart_rx.v
+Implements UART data reception including:
+- Start Bit Detection
+- Data Sampling
+- Stop Bit Verification
 
-# UART Frame Format
+### 4. uart_top.v
+Top-level module integrating:
+- Baud Generator
+- UART Transmitter
+- UART Receiver
 
-```
-+---------+----+----+----+----+----+----+----+----+---------+
-| Start   | D0 | D1 | D2 | D3 | D4 | D5 | D6 | D7 | Stop |
-+---------+----+----+----+----+----+----+----+----+---------+
-```
-
-- 1 Start Bit
-- 8 Data Bits
-- 1 Stop Bit
-
----
-
-# Finite State Machine
-
-## UART Transmitter
-
-- IDLE
-- START
-- DATA
-- STOP
-
-## UART Receiver
-
-- IDLE
-- DATA
-- STOP
-
----
-
-# Baud Rate Generator
-
-The baud generator divides the system clock to generate the required baud tick.
-
-Example:
-
-- System Clock : **50 MHz**
-- Baud Rate : **9600**
-
-Divider:
-
-```
-50,000,000 / 9600 ≈ 5208
-```
-
----
-
-# Simulation
-
-Simulation was performed using **ModelSim Intel FPGA Edition**.
-
-Input Data
-
-```
-8'h41
-```
-
-Output Data
-
-```
-8'h41
-```
-
-Result
-
-✅ Successful UART Transmission and Reception
+### 5. uart_top_tb.v
+Testbench used for simulation and verification.
 
 ---
 
 # Simulation Results
 
-## RTL Schematic
+### Simulation 1
 
-```
-![RTL](screenshots/Screenshot 2026-05-31 083640.png)
-```
+![Simulation 1](screenshots/Screenshot1.png)
 
 ---
 
-## Top Module
+### Simulation 2
 
-```
-![Top Module](screenshots/Screenshot 2026-05-31 083914.png)
-```
+![Simulation 2](screenshots/Screenshot2.png)
 
 ---
 
-## Waveform
+### Simulation 3
 
-```
-![Waveform](screenshots/Screenshot 2026-05-31 084056.png)
-```
+![Simulation 3](screenshots/Screenshot3.png)
 
 ---
 
-## Transmitter
+### Simulation 4
 
-```
-![Transmitter](screenshots/Screenshot 2026-05-31 084159.png)
-```
+![Simulation 4](screenshots/Screenshot4.png)
 
 ---
 
-## Receiver
+### Simulation 5
 
-```
-![Receiver](screenshots/Screenshot 2026-05-31 084359.png)
-```
+![Simulation 5](screenshots/Screenshot5.png)
 
 ---
 
-## Simulation Output
+### Simulation 6
 
-```
-![Simulation](screenshots/Screenshot 2026-05-31 084515.png)
-```
+![Simulation 6](screenshots/Screenshot6.png)
 
 ---
 
-## Final Verification
-
-```
-![Verification](screenshots/Screenshot 2026-05-31 084956.png)
-```
-
----
-
-# Technologies Used
+# Tools Used
 
 - Verilog HDL
 - ModelSim
-- RTL Design
-- Digital Logic Design
+- Visual Studio Code
+- Git
+- GitHub
 
 ---
 
-# Applications
+# How to Run
 
-- FPGA Design
-- Embedded Systems
-- UART Communication
-- GPS Modules
-- Bluetooth Modules
-- Serial Debugging
-- Industrial Automation
+Compile the design:
+
+```bash
+vlog rtl/*.v
+```
+
+Start simulation:
+
+```bash
+vsim uart_top_tb
+```
+
+Run simulation:
+
+```bash
+run -all
+```
 
 ---
 
-# Future Improvements
+# Future Enhancements
 
-- FIFO Buffer
-- Parity Bit Support
 - Configurable Baud Rate
+- Parity Bit Support
+- FIFO Buffer
 - Interrupt Support
-- FPGA Hardware Implementation
-
----
-
-# Learning Outcomes
-
-- UART Protocol
-- RTL Design
-- Finite State Machine
-- Verilog HDL
-- Serial Communication
-- ModelSim Simulation
-- Digital Hardware Verification
-
----
-
-# References
-
-- Texas Instruments UART User Guide
-- IEEE Verilog HDL Standard
-- UART Communication Protocol Documentation
+- Configurable Data Width
 
 ---
 
