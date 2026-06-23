@@ -26,17 +26,17 @@ module uart_top_tb;
     initial begin
         // Initialize Signals
         clk = 0;
-        reset = 1;      // Start in Reset
+        reset = 1;                                       // Start in Reset
         tx_start = 0;
         tx_data = 8'h00;
 
-        #100;           // Wait 100ns
-        reset = 0;      // Release Reset
+        #100;                                         // Wait 100ns
+        reset = 0;                                      // Release Reset
         
         #100;
-        tx_data = 8'h41; // ASCII 'A' (Binary 01000001)
-        tx_start = 1;    // Trigger TX
-        #20;             // Hold for one clock cycle
+        tx_data = 8'h41;                                // ASCII 'A' (Binary 01000001)
+        tx_start = 1;                                   // Trigger TX
+        #20;                                            // Hold for one clock cycle
         tx_start = 0;
 
         // Wait for RX to finish (approx 10 bits * 10 divisor * 20ns = 2000ns)
